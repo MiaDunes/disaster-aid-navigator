@@ -1,0 +1,8 @@
+{
+  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
+  "files.associations": { "*.html": "html" },
+  "liveServer.settings.root": "/",
+  "liveServer.settings.port": 5501,
+  "search.exclude": { "js/i18n-strings.js": true }
+}

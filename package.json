@@ -1,0 +1,9 @@
+{
+  "name": "disaster-aid-navigator",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Pre-application household disaster-recovery screening tool (MVP).",
+  "scripts": {
+    "start": "npx --yes serve -l 5500 ."
+  }
+}

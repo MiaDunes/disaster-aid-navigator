@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Disaster Aid Navigator</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400;1,6..72,500&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div id="landingView">
+
+
+  <div class="topbar">
+    <div class="wordmark">Disaster Aid Navigator</div>
+    <div class="badge"><span class="dot"></span>Free &middot; independent &middot; not a government site</div>
+  </div>
+
+  <section class="hero">
+    <h1 data-i18n-html="h1Landing">Let's find out what help<br><em>you can get</em>.</h1>
+    <p class="lede">Tell us what happened. We'll check FEMA, SBA, your state, and nonprofit programs, and show you what you're likely eligible for — before you fill out a single application.</p>
+  </section>
+
+  <div class="agent-wrap">
+    <div class="agent-bar" id="agentBar">
+      <svg class="agent-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 3v3M12 18v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M3 12h3M18 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        <circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.6"/>
+      </svg>
+      <input id="agentInput" type="text" placeholder="What assistance do you need?" />
+      <button class="agent-send" id="agentSend" aria-label="Start">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+    </div>
+    <p class="trust-line">Nothing you type here is submitted anywhere. <strong>You're in control the whole time.</strong></p>
+
+    <div class="chip-row">
+      <button class="chip" data-fill="Our home flooded and we don't know where to start.">Flood</button>
+      <button class="chip" data-fill="A wildfire damaged our house.">Wildfire</button>
+      <button class="chip" data-fill="We're recovering from a hurricane.">Hurricane</button>
+      <button class="chip" data-fill="A tornado hit our neighborhood.">Tornado</button>
+      <button class="chip" data-fill="Something else happened to our home.">Something else</button>
+    </div>
+  </div>
+
+  <div class="whatsnew"><div class="whatsnew-box">
+    <h3>Updated October 22, 2026</h3>
+    <ul>
+      <li>Texas July 2026 floods: FEMA denied household aid in a September 28 letter, and the state is reviewing an appeal.</li>
+      <li>Washington wildfires: the state household grant lists an October 30, 2026 deadline.</li>
+      <li>FEMA household aid now reaches $44,800 for housing and $44,800 for other needs in disasters declared since October 1, 2025.</li>
+    </ul>
+  </div></div>
+
+  <section class="how">
+    <div class="how-head">
+      <h2>Four steps, about ten minutes</h2>
+      <p>You talk to us in plain language. We do the cross-referencing.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="num">1</span>
+        <h3>Tell us what happened</h3>
+        <p>Where you live, what kind of disaster, and what you lost — no forms, just a conversation.</p>
+      </div>
+      <div class="step">
+        <span class="num">2</span>
+        <h3>We check real programs</h3>
+        <p>Federal, state, and nonprofit program rules — not a guess, not a generic checklist.</p>
+      </div>
+      <div class="step">
+        <span class="num">3</span>
+        <h3>Get your plan</h3>
+        <p>What you're likely eligible for, what to gather, and what's time-sensitive.</p>
+      </div>
+      <div class="step">
+        <span class="num">4</span>
+        <h3>Apply where it counts</h3>
+        <p>We link you straight to the real applications. We never collect them ourselves.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="programs">
+    <div class="programs-head">
+      <h2>What we check for you</h2>
+      <p>Every household is different, so we only show what actually applies to yours.</p>
+    </div>
+    <div class="program-grid">
+      <div class="program-card">
+        <p class="label">FEMA</p>
+        <p>Individual Assistance for home repair, temporary housing, and essential needs.</p>
+      </div>
+      <div class="program-card">
+        <p class="label">SBA</p>
+        <p>Low-interest disaster loans — open to renters and homeowners, not just businesses.</p>
+      </div>
+      <div class="program-card">
+        <p class="label">State &amp; local</p>
+        <p>Programs specific to your state or county that often go unnoticed.</p>
+      </div>
+      <div class="program-card">
+        <p class="label">Nonprofit help</p>
+        <p>Red Cross and community organizations — grants, not loans, no approval required first.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="states">
+    <div class="states-head">
+      <h2>States we cover first</h2>
+      <p>These five states have had the most federal disaster declarations, so we built their state programs first.</p>
+    </div>
+    <div class="state-grid">
+      <div class="state-card"><p class="label">California</p><p>Wildfires drive its disaster declarations. 362 federal declarations since 1980, the most of any state.</p></div>
+      <div class="state-card"><p class="label">Texas</p><p>355 federal declarations since 1980, from wildfires, hurricanes, floods and tornadoes.</p></div>
+      <div class="state-card"><p class="label">Oklahoma</p><p>In Tornado Alley, with frequent severe storms and tornadoes.</p></div>
+      <div class="state-card"><p class="label">Washington</p><p>Floods, storms and wildfires. Its own state aid program turns on for specific disasters.</p></div>
+      <div class="state-card"><p class="label">Florida</p><p>Hurricanes: more federal hurricane declarations since 2003 than any other state.</p></div>
+    </div>
+    <p class="states-note">Living in another state? You still get federal and nonprofit results, plus 211 for local programs.</p>
+    <p class="states-src">Declaration counts: USAFacts and MoneyGeek analyses of FEMA data.</p>
+  </section>
+
+  <footer>
+    <p class="note"><strong>This is a navigation tool, not an application.</strong> We help you understand what you may qualify for and point you to the real FEMA, SBA, state, and nonprofit applications. We can't approve or deny anything.</p>
+    <p class="scam">Be careful of anyone asking for payment to "help" you apply for disaster aid. Legitimate assistance is always free.</p>
+  </footer>
+
+
+</div>
+<div id="quizView">
+
+
+<div class="shell">
+
+  <div class="topbar">
+    <div class="wordmark">Disaster Aid Navigator</div>
+    <div class="save-note">Your answers stay in this window</div>
+  </div>
+
+  <div class="progress-wrap">
+    <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+    <div class="progress-label">
+      <span id="progressText" data-no-i18n>Step 1 of 6</span>
+      <span id="progressTime" data-no-i18n>About 8 minutes left</span>
+    </div>
+  </div>
+
+  <div class="urgent-banner" id="urgentBanner">
+    <svg viewBox="0 0 24 24" fill="none"><path d="M12 9v4M12 16.5h.01M10.3 3.9 2.5 17.5c-.6 1 .1 2.3 1.3 2.3h16.4c1.2 0 1.9-1.3 1.3-2.3L13.7 3.9c-.6-1.1-2-1.1-2.6 0Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+    <p data-i18n-html="urgentBanner">If you need shelter, food, or medical care <strong>right now</strong>, don't wait for this questionnaire. <a href="#" target="_blank">Find emergency help near you</a> or call 211. You can still finish this afterward.</p>
+  </div>
+
+  <!-- STEP 0: immediate needs -->
+  <div class="step active" data-step="0">
+    <p class="eyebrow">Before we start</p>
+    <h1 class="qtitle">Do you need help right now?</h1>
+    <p class="qhelp">This is just to make sure you get the fastest path to safety first. Everything else can wait a few minutes.</p>
+    <div class="option-grid single-col" data-group="urgent" data-type="single">
+      <div class="opt radio" data-value="yes"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Yes — I need shelter, food, or medical care now</div>
+      <div class="opt radio" data-value="no"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No — I'm safe, just here to check what aid I qualify for</div>
+    </div>
+  </div>
+
+  <!-- STEP 1: disaster & location -->
+  <div class="step" data-step="1">
+    <p class="eyebrow">Step 1 of 6</p>
+    <h1 class="qtitle">What happened, and where?</h1>
+    <p class="qhelp">This tells us which declared programs actually apply to your county.</p>
+
+    <div class="option-grid" data-group="disasterType" data-type="single">
+      <div class="opt radio" data-value="wildfire"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Wildfire</div>
+      <div class="opt radio" data-value="flood"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Flood</div>
+      <div class="opt radio" data-value="hurricane"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Hurricane</div>
+      <div class="opt radio" data-value="tornado"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Tornado</div>
+      <div class="opt radio" data-value="earthquake"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Earthquake</div>
+      <div class="opt radio" data-value="other"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Something else</div>
+    </div>
+
+    <div class="field" style="margin-top:20px;">
+      <label>Which state are you in?</label>
+      <div class="option-grid" data-group="state" data-type="single"><div class="opt radio" data-value="ca"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>California</div><div class="opt radio" data-value="tx"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Texas</div><div class="opt radio" data-value="ok"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Oklahoma</div><div class="opt radio" data-value="wa"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Washington</div><div class="opt radio" data-value="fl"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Florida</div><div class="opt radio" data-value="other"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Another state</div></div>
+      <div class="note-box">We have state program details for five states so far. Anywhere else still gets federal and nonprofit results.</div>
+    </div>
+
+    <div id="txExtra" style="display:none;margin-top:20px;">
+      <div class="field">
+        <label>Which Texas event was it?</label>
+        <div class="option-grid single-col" data-group="txEvent" data-type="single"><div class="opt radio" data-value="flood26"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>The July 2026 storms and flooding</div><div class="opt radio" data-value="storms24"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>The 2024 storms, tornadoes and flooding, or Hurricane Beryl</div><div class="opt radio" data-value="flood25"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>The July 2025 Hill Country flooding</div><div class="opt radio" data-value="other"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>A different event</div></div>
+      </div>
+      <div class="field">
+        <label for="txCounty">Which county is your home in?</label>
+        <select id="txCounty"><option value="">Choose a county</option><option value="anderson">Anderson</option><option value="bell">Bell</option><option value="brazoria">Brazoria</option><option value="caldwell">Caldwell</option><option value="cooke">Cooke</option><option value="dallas">Dallas</option><option value="denton">Denton</option><option value="fort-bend">Fort Bend</option><option value="galveston">Galveston</option><option value="guadalupe">Guadalupe</option><option value="hardin">Hardin</option><option value="hays">Hays</option><option value="henderson">Henderson</option><option value="hockley">Hockley</option><option value="jasper">Jasper</option><option value="kaufman">Kaufman</option><option value="liberty">Liberty</option><option value="matagorda">Matagorda</option><option value="montgomery">Montgomery</option><option value="newton">Newton</option><option value="polk">Polk</option><option value="san-jacinto">San Jacinto</option><option value="smith">Smith</option><option value="trinity">Trinity</option><option value="tyler">Tyler</option><option value="walker">Walker</option><option value="wharton">Wharton</option><option value="harris-houston">Harris County or the City of Houston</option><option value="other">Another Texas county</option></select>
+      </div>
+    </div>
+
+    <div id="waExtra" style="display:none;margin-top:20px;">
+      <div class="field">
+        <label>Which Washington event was it?</label>
+        <div class="option-grid single-col" data-group="waEvent" data-type="single">
+          <div class="opt radio" data-value="wildfire26"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>The 2026 wildfires</div>
+          <div class="opt radio" data-value="flood25"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>The December 2025 floods</div>
+          <div class="opt radio" data-value="other"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>A different event</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="field" style="margin-top:20px;">
+      <label for="dateInput">When did it happen?</label>
+      <input type="date" id="dateInput">
+    </div>
+    <div class="field">
+      <label for="addressInput">Your address or county</label>
+      <input type="text" id="addressInput" placeholder="e.g. Asheville, Buncombe County, NC">
+    </div>
+    <div class="field">
+      <label>Has FEMA opened individual assistance (help for households) in your county?</label>
+      <div class="option-grid" data-group="declared" data-type="single">
+        <div class="opt radio" data-value="yes"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Yes</div>
+        <div class="opt radio" data-value="no"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No</div>
+        <div class="opt radio" data-value="unsure"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Not sure</div>
+      </div>
+      <div class="note-box" data-i18n-html="declNote">Not sure? <a href="https://www.fema.gov/disaster/declarations" target="_blank" rel="noopener" style="color:inherit;font-weight:700;">Look up your disaster at FEMA.gov</a> and check that it lists "Individual Assistance" for your county. A declaration for governments only does not help households.</div>
+    </div>
+
+  </div>
+
+  <!-- STEP 2: housing -->
+  <div class="step" data-step="2">
+    <p class="eyebrow">Step 2 of 6</p>
+    <h1 class="qtitle">Tell us about your home</h1>
+    <p class="qhelp">Most aid is tied to your primary residence, so this shapes what you'll qualify for.</p>
+
+    <div class="field">
+      <label>Do you own or rent?</label>
+      <div class="option-grid" data-group="ownRent" data-type="single">
+        <div class="opt radio" data-value="own"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Own</div>
+        <div class="opt radio" data-value="rent"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Rent</div>
+        <div class="opt radio" data-value="other"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Living with family/other</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Is this your primary home — where you live most of the year?</label>
+      <div class="option-grid" data-group="primaryResidence" data-type="single">
+        <div class="opt radio" data-value="yes"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Yes</div>
+        <div class="opt radio" data-value="no"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No, a second home or rental</div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label>Can you currently live there?</label>
+      <div class="option-grid" data-group="livable" data-type="single">
+        <div class="opt radio" data-value="yes"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Yes, it's livable</div>
+        <div class="opt radio" data-value="no"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No, we've been displaced</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3: loss type -->
+  <div class="step" data-step="3">
+    <p class="eyebrow">Step 3 of 6</p>
+    <h1 class="qtitle">What did you lose or damage?</h1>
+    <p class="qhelp">Pick everything that applies — this decides which document checklist you'll get.</p>
+
+    <div class="option-grid" data-group="lossType" data-type="multi">
+      <div class="opt" data-value="structure"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Structural home damage</div>
+      <div class="opt" data-value="property"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Personal property (car, furniture, appliances)</div>
+      <div class="opt" data-value="business"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Business or self-employment income</div>
+      <div class="opt" data-value="medical"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Medical, funeral, or dependent-care costs</div>
+    </div>
+  </div>
+
+  <!-- STEP 4: coverage -->
+  <div class="step" data-step="4">
+    <p class="eyebrow">Step 4 of 6</p>
+    <h1 class="qtitle">Do you have insurance?</h1>
+    <p class="qhelp">Insurance doesn't disqualify you — it just changes what's covered elsewhere. Being uninsured is fine too.</p>
+
+    <div class="option-grid single-col" data-group="insurance" data-type="single">
+      <div class="opt radio" data-value="filed"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Yes, and I've already filed a claim</div>
+      <div class="opt radio" data-value="not-filed"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Yes, but I haven't filed a claim yet</div>
+      <div class="opt radio" data-value="none"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No insurance</div>
+      <div class="opt radio" data-value="unsure"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Not sure</div>
+    </div>
+  </div>
+
+  <!-- STEP 5: household -->
+  <div class="step" data-step="5">
+    <p class="eyebrow">Step 5 of 6</p>
+    <h1 class="qtitle">A little about your household</h1>
+    <p class="qhelp">This is the sensitive part — here's exactly why we ask, and what we don't need.</p>
+
+    <div class="field">
+      <label for="householdSize">How many people live in your household?</label>
+      <input type="text" id="householdSize" placeholder="e.g. 4">
+    </div>
+
+    <div class="field">
+      <label>Is at least one person in your household — including a child — a U.S. citizen, national, or qualified immigrant?</label>
+      <div class="option-grid" data-group="citizenship" data-type="single">
+        <div class="opt radio" data-value="yes"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Yes</div>
+        <div class="opt radio" data-value="no"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No</div>
+        <div class="opt radio" data-value="unsure"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Not sure</div>
+      </div>
+      <div class="note-box">We only need a yes/no. This never asks for names, numbers, or documents — and even a "no" here still leaves you options like Red Cross assistance.</div>
+    </div>
+
+    <div class="field" style="margin-top:20px;">
+      <label>Does anyone in your household need extra support — age, disability, or medical needs?</label>
+      <div class="option-grid" data-group="accessNeeds" data-type="single">
+        <div class="opt radio" data-value="yes"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Yes</div>
+        <div class="opt radio" data-value="no"><span class="mark"><svg viewBox="0 0 24 24" fill="none"><path d="M5 13l4 4L19 7" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg></span>No</div>
+      </div>
+    </div>
+
+    <button class="skip" id="skipHousehold">Prefer not to answer this step</button>
+  </div>
+
+  <!-- STEP 6: review -->
+  <div class="step" data-step="6">
+    <p class="eyebrow">Last look</p>
+    <h1 class="qtitle">Here's what we've got</h1>
+    <p class="qhelp">Check it over — nothing has been submitted anywhere yet. We'll use this to match you with program rules next.</p>
+
+    <div class="review-list" id="reviewList" data-no-i18n></div>
+  </div>
+
+  <div class="nav">
+    <button class="btn btn-ghost" id="backBtn">Back</button>
+    <button class="btn btn-primary" id="nextBtn" data-no-i18n>Continue</button>
+  </div>
+
+  <p class="trust-footer">This questionnaire isn't a government application. Your answers stay with you until you choose to apply.</p>
+
+</div>
+
+
+</div>
+<div id="langBar" data-no-i18n><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.6"/><path d="M3 12h18M12 3c2.6 2.6 4 5.6 4 9s-1.4 6.4-4 9c-2.6-2.6-4-5.6-4-9s1.4-6.4 4-9Z" stroke="currentColor" stroke-width="1.6"/></svg><select id="langSel" aria-label="Language / Idioma / 语言 / Wika / Ngôn ngữ"></select></div>
+<div id="langModal" role="dialog" aria-modal="true" aria-labelledby="lmTitle" data-no-i18n>
+  <div class="dlg">
+    <h2 id="lmTitle">Choose your language</h2>
+    <p class="alt">Elija su idioma &middot; 选择语言 &middot; Piliin ang wika &middot; Chọn ngôn ngữ</p>
+    <div class="langs">
+      <button type="button" data-lang="en">English</button>
+      <button type="button" data-lang="es">Español</button>
+      <button type="button" data-lang="zh">中文（简体）</button>
+      <button type="button" data-lang="tl">Tagalog</button>
+      <button type="button" data-lang="vi">Tiếng Việt</button>
+    </div>
+  </div>
+</div>
+<div id="citizenModal" role="dialog" aria-modal="true" aria-labelledby="czTitle">
+  <div class="dlg">
+    <p class="eyebrow">One quick question before we start</p>
+    <h2 id="czTitle">Is anyone in your household, including a child, a U.S. citizen, a non-citizen national, or a qualified immigrant?</h2>
+    <p class="lede">Some aid programs have citizenship rules, so your answer helps us show the right ones. It never stops you from using this tool.</p>
+    <div class="note">Only one person in the household needs to qualify for FEMA individual aid. If the answer is no, you still have options such as Red Cross help. We never ask for names or documents, and nothing here is stored or sent.</div>
+    <div class="choices">
+      <button type="button" data-cz="yes">Yes</button>
+      <button type="button" data-cz="no">No</button>
+      <button type="button" data-cz="unsure">Not sure</button>
+    </div>
+    <button type="button" class="skip" data-cz="skip">Prefer not to say</button>
+  </div>
+</div>
+<div id="consentModal" role="dialog" aria-modal="true" aria-labelledby="cTitle">
+  <div class="dlg">
+    <div id="consentForm">
+      <h2 id="cTitle">Before we share your plan</h2>
+      <p class="lede" id="cLede" data-no-i18n>If you'd like a person to help you apply, we can pass along your plan so a disaster case manager can contact you. It's your choice, and you can skip this and use the links on your plan instead.</p>
+      <div class="share"><strong>What would be shared:</strong>
+        <ul><li>Your name and the contact details you enter below</li><li id="cShareItem" data-no-i18n>Your questionnaire answers and the plan results</li></ul>
+      </div>
+      <div class="row2">
+        <div><label class="f" for="cName">Full name</label><input type="text" id="cName" autocomplete="name"></div>
+        <div><label class="f" for="cLang">Preferred language</label><select id="cLang"><option value="English">English</option><option value="Spanish">Spanish</option><option value="Chinese">Chinese</option><option value="Tagalog">Tagalog</option><option value="Vietnamese">Vietnamese</option><option value="Other">Other</option></select></div>
+      </div>
+      <div class="row2">
+        <div><label class="f" for="cPhone">Phone</label><input type="tel" id="cPhone" autocomplete="tel"></div>
+        <div><label class="f" for="cEmail">Email</label><input type="email" id="cEmail" autocomplete="email"></div>
+      </div>
+      <label class="f" for="cMethod">Best way to reach you</label>
+      <select id="cMethod"><option value="Phone call">Phone call</option><option value="Text message">Text message</option><option value="Email">Email</option></select>
+      <label class="chk"><input type="checkbox" id="c1"><span id="c1Text" data-no-i18n>I agree that Disaster Aid Navigator may share my name, contact details, and plan with a disaster case manager so they can contact me about help.</span></label>
+      <label class="chk"><input type="checkbox" id="c2"><span>I understand this is not an application, and that it does not guarantee any aid. Only the agencies decide.</span></label>
+      <p class="never">We never ask for your Social Security number, bank details, or immigration documents here. You can withdraw this agreement at any time.</p>
+      <div class="demo">Preview: this demo has no server, so nothing you enter here is sent anywhere.</div>
+      <div class="btns"><button class="b gh" id="cCancel" type="button">Not now</button><button class="b pri" id="cSubmit" type="button" disabled>Agree and continue</button></div>
+    </div>
+    <div id="consentDone" style="display:none;">
+      <h2>You're all set</h2>
+      <p class="lede" id="cDoneText" data-no-i18n></p>
+      <div class="btns"><button class="b pri" id="cDoneBtn" type="button">Back to my plan</button></div>
+    </div>
+  </div>
+</div>
+<div id="planView"><div class="shell">
+  <div class="topbar"><div class="wordmark">Disaster Aid Navigator</div><div><button class="linkbtn" id="planEdit">Change my answers</button><button class="linkbtn" id="planRestart">Start over</button></div></div>
+  <div id="planBody" data-no-i18n></div>
+</div></div>
+<script src="js/i18n-strings.js"></script>
+<script src="js/i18n.js"></script>
+<script src="js/quiz.js"></script>
+<script src="js/landing.js"></script>
+<script src="js/engine.js"></script>
+</body>
+</html>
