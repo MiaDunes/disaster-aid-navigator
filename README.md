@@ -8,7 +8,7 @@ Plain HTML, CSS, and JavaScript. No build step, no backend.
 
 1. Open this folder in VS Code (File → Open Folder).
 2. Install the recommended extensions when prompted (Live Server is the one you need).
-3. Right-click `index.html` → **Open with Live Server**. It opens at http://localhost:5500.
+3. Right-click `index.html` → 
 
 No VS Code extension? Run `npm start` in the terminal (needs Node.js), or just
 double-click `index.html`.
