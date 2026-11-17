@@ -632,6 +632,13 @@ body{
 #langModal .langs{display:grid;gap:10px;}
 #langModal .langs button{font-family:'Manrope',sans-serif;font-size:17px;font-weight:600;padding:15px 16px;border-radius:12px;border:1.5px solid var(--hairline);background:#fff;color:var(--ink);cursor:pointer;text-align:left;transition:border-color .15s,background .15s;}
 #langModal .langs button:hover,#langModal .langs button:focus-visible,#langModal .langs button.guess{border-color:var(--primary);background:var(--primary-tint);outline:none;}
+#readAloudBtn{display:flex;align-items:center;gap:6px;font-family:'Manrope',sans-serif;font-size:13.5px;font-weight:600;color:var(--ink);background:transparent;border:none;border-right:1px solid var(--hairline);padding:4px 10px 4px 0;margin-right:4px;cursor:pointer;}
+#readAloudBtn svg{width:17px;height:17px;color:var(--ink-soft);}
+#readAloudBtn .wave{opacity:.35;}
+#readAloudBtn.on{color:var(--primary-deep);}
+#readAloudBtn.on svg{color:var(--primary);}
+#readAloudBtn.on .wave{opacity:1;}
+#readAloudBtn:focus-visible{outline:2px solid var(--primary);outline-offset:3px;border-radius:6px;}
 @media print{#langBar{display:none;}}
 
 #landingView .states{max-width:900px;margin:96px auto 0;padding:0 24px;}
