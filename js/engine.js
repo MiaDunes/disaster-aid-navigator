@@ -32,8 +32,8 @@ const PROGRAMS = [
     ]},
   { id:'sba_disaster', name:'SBA Disaster Loans', kind:'Loan (repaid)', reviewed:'2026-09',
     blurb:'Low-interest loans for homeowners, renters, and businesses. Open to people without a business. This is a loan you repay, and you can apply to FEMA at the same time.',
-    source:'https://www.sba.gov/funding-programs/disaster-assistance',
-    apply:'https://disasterloanassistance.sba.gov', applyLabel:'Start at SBA Disaster Loan Assistance',
+    source:'https://www.sba.gov/disaster/',
+    apply:'https://www.sba.gov/disaster/', applyLabel:'Start at SBA Disaster Loan Assistance',
     gates:[
       {label:'Your area is covered by an SBA or federal disaster declaration', field:'declared', pass:['yes'], fail:['no'], soft:true, failText:'SBA loans need a declaration for your area. This can change if one is added.'},
       {label:'The damaged home is your primary residence (or you have a business loss)', field:'primaryResidence', pass:['yes'], fail:['no'], unlessLoss:'business', failText:'The homeowner and renter loans are for primary residences. A business loss may still qualify.'},
